@@ -39,7 +39,7 @@ MATRIX_BOT_DISPLAYNAME=Сброс пароля
 MATRIX_BOT_AVATAR=mxc://...
 
 # Admin комната для отправки команд
-ADMIN_ROOM_ID=!admin_room_id:matrix.yourserver.com
+MATRIX_ADMIN_ROOM_ID=!admin_room_id:matrix.yourserver.com
 ```
 
 ## Запуск

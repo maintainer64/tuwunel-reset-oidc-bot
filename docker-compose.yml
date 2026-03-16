@@ -14,7 +14,7 @@ services:
       - MATRIX_CRYPTO_DB=/data/crypto.db
       - MATRIX_BOT_DISPLAYNAME=${MATRIX_BOT_DISPLAYNAME:-Password Reset Bot}
       - MATRIX_BOT_AVATAR=${MATRIX_BOT_AVATAR}
-      - ADMIN_ROOM_ID=${ADMIN_ROOM_ID}
+      - MATRIX_ADMIN_ROOM_ID=${MATRIX_ADMIN_ROOM_ID}
       - DEBUG=${DEBUG}
     env_file:
       - .env

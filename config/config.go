@@ -29,7 +29,7 @@ func Load() *Config {
 		CryptoDBPath: getEnv("MATRIX_CRYPTO_DB", "crypto.db"),
 		DisplayName:  getEnv("MATRIX_BOT_DISPLAYNAME", "Password Reset Bot"),
 		AvatarURL:    getEnv("MATRIX_BOT_AVATAR", ""),
-		AdminRoomID:  getEnv("ADMIN_ROOM_ID", ""),
+		AdminRoomID:  getEnv("MATRIX_ADMIN_ROOM_ID", ""),
 		Debug:        getEnv("DEBUG", "false") == "true",
 	}
 }
