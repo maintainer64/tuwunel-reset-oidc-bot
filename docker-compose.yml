@@ -1,0 +1,20 @@
+services:
+  bot:
+    build: .
+    container_name: tuwunel-reset-bot
+    restart: always
+    platform: linux/amd64
+    volumes:
+      - ./data:/data
+    environment:
+      - MATRIX_HOMESERVER=${MATRIX_HOMESERVER}
+      - MATRIX_BOT_USERNAME=${MATRIX_BOT_USERNAME}
+      - MATRIX_BOT_PASSWORD=${MATRIX_BOT_PASSWORD}
+      - MATRIX_PICKLE_KEY=${MATRIX_PICKLE_KEY:-change-me-in-production}
+      - MATRIX_CRYPTO_DB=/data/crypto.db
+      - MATRIX_BOT_DISPLAYNAME=${MATRIX_BOT_DISPLAYNAME:-Password Reset Bot}
+      - MATRIX_BOT_AVATAR=${MATRIX_BOT_AVATAR}
+      - ADMIN_ROOM_ID=${ADMIN_ROOM_ID}
+      - DEBUG=${DEBUG}
+    env_file:
+      - .env
